@@ -9138,5 +9138,20 @@
       "0xfd36e2c2a6789db23113685031d7f16329158384._setMarketBorrowCaps([0xeca88125a5adbe82614ffc12d0db554e2e2867c8], [324000000000000000000000000])",
       "0x3344417c9360b963ca93a4e8305361aede340ab9.setMarketSupplyCaps([0x02c5fb0f26761093d297165e902e96d08576d344], [200000000000000000000000])"
     ]
+  },
+  {
+    "id":"491",
+    "type":"Normal",
+    "title":"VIP-491 [Ethereum][BNB Chain] Prime Adjustment - Q2 2025",
+    "description":"If passed, this VIP will perform the following actions following the Community proposals <a href=\"https://community.venus.io/t/prime-adjustment-proposal-q2-2025-eth-mainnet/4997\">Prime Adjustment Proposal - Q2 2025 [ETH Mainnet]</a> and <a href=\"https://community.venus.io/t/prime-adjustment-proposal-q2-2025-bnb-chain/4996\">Prime Adjustment Proposal - Q2 2025 [BNB Chain]</a>, and the associated snapshots (<a href=\"https://snapshot.box/#/s:venus-xvs.eth/proposal/0xd0bba63cc1f5a2a6191ce054a80764b2f30aa406f2721d765a6b253c1dff9cab\">here</a> and <a href=\"https://snapshot.box/#/s:venus-xvs.eth/proposal/0x3e4c0f597c498e44ba14396d8ff8bf7bfdceba16f8668d10e2cfb33921820bbe\">here</a>):\n\n- Ethereum: set the prime distribution speed for WBTC to 0.00000001 WBTC per block (the minimum amount defined in WBTC)\n- BNB Chain: withdraw the following amounts from the <a href=\"https://bscscan.com/address/0xf322942f644a996a617bd29c16bd7d231d9f35e9\">Venus Treasury</a> to the <a href=\"https://bscscan.com/address/0x23c4f844ffddc6161174eb32c770d4d8c07833f2\">PrimeLiquidityProvider</a> contract (where Prime rewards are stored), consuming $60,000 from the Prime budget:\n    - 33,000 USDT (55% of $60K)\n    - 18,000 USDC (30% of $60K)\n    - 3.33 ETH ($6,000, 10% of $60K, assuming an ETH price of $1,800)\n    - 0.03 BTCB ($3,000, 5% of $60K, assuming a BTCB price of $97,000)\n\nThe distributions of the $60K from the Prime budget follow the rules defined in the community proposal <a href=\"https://community.venus.io/t/prime-adjustment-proposal-q2-2025-bnb-chain/4996\">Prime Adjustment Proposal - Q2 2025 [BNB Chain]</a>. After this VIP, the Prime budget is $225,080.\n\n#### References\n\n- <a href=\"https://app.venus.io/#/governance/proposal/472?chainId=56\">VIP-472 [Ethereum][BNB Chain] Prime Adjustment Proposal - Q2 2025</a>\n- <a href=\"https://github.com/VenusProtocol/vips/pull/553\">VIP simulation</a>\n- <a href=\"https://docs-v4.venus.io/governance/tokenomics\">Tokenomics</a>",
+    "endblock":49267864,
+    "eta":1746731277,
+    "actions":[
+      "0xf322942f644a996a617bd29c16bd7d231d9f35e9.withdrawTreasuryBEP20(0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c, 30000000000000000, 0x23c4f844ffddc6161174eb32c770d4d8c07833f2)",
+      "0xf322942f644a996a617bd29c16bd7d231d9f35e9.withdrawTreasuryBEP20(0x2170ed0880ac9a755fd29b2688956bd959f933f8, 3330000000000000000, 0x23c4f844ffddc6161174eb32c770d4d8c07833f2)",
+      "0xf322942f644a996a617bd29c16bd7d231d9f35e9.withdrawTreasuryBEP20(0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d, 18000000000000000000000, 0x23c4f844ffddc6161174eb32c770d4d8c07833f2)",
+      "0xf322942f644a996a617bd29c16bd7d231d9f35e9.withdrawTreasuryBEP20(0x55d398326f99059ff775485246999027b3197955, 33000000000000000000000, 0x23c4f844ffddc6161174eb32c770d4d8c07833f2)",
+      "0x8ba6affd0e7bcd0028d1639225c84ddcf53d8872.setTokensDistributionSpeed([0x2260fac5e5542a773aa44fbcfedf7c193bc2c599], [1])"
+    ]
   }
 ]
