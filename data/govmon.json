@@ -9153,5 +9153,17 @@
       "0xf322942f644a996a617bd29c16bd7d231d9f35e9.withdrawTreasuryBEP20(0x55d398326f99059ff775485246999027b3197955, 33000000000000000000000, 0x23c4f844ffddc6161174eb32c770d4d8c07833f2)",
       "0x8ba6affd0e7bcd0028d1639225c84ddcf53d8872.setTokensDistributionSpeed([0x2260fac5e5542a773aa44fbcfedf7c193bc2c599], [1])"
     ]
+  },
+  {
+    "id":"492",
+    "type":"Normal",
+    "title":"VIP-492 [BNB Chain] Configure Binance Oracle as the Fallback oracle for BNB on BNB Chain",
+    "description":"#### Summary\n\nIf passed, following the community proposal \u201c<a href=\"https://community.venus.io/t/proposal-increase-robustness-of-feeds-configuration/4837\">Proposal: Increase robustness of feeds configuration</a>\u201d (<a href=\"https://snapshot.box/#/s:venus-xvs.eth/proposal/0xac3ec7729cce1cc99aa5b16d08ae1908a84ddbb25c4cc6ae22fd5e3722311dd9\">snapshot</a>), this VIP will set Binance Oracle as the fallback oracle for BNB on BNB Chain, instead of Chainlink, which will remain as the pivot oracle.\n\n#### Description\n\nThe current Resilient Oracle setup for BNB on BNB Chain is:\n\n- MAIN - <a href=\"https://bscscan.com/address/0x8455EFA4D7Ff63b8BFD96AdD889483Ea7d39B70a\">RedStone oracle</a>\n- PIVOT - <a href=\"https://bscscan.com/address/0x1B2103441A0A108daD8848D8F5d790e4D402921F\">Chainlink oracle</a>\n- FALLBACK - <a href=\"https://bscscan.com/address/0x1B2103441A0A108daD8848D8F5d790e4D402921F\">Chainlink oracle</a>\n\nThe proposed Oracle setup for BNB on BNB Chain is:\n\n- MAIN - <a href=\"https://bscscan.com/address/0x8455EFA4D7Ff63b8BFD96AdD889483Ea7d39B70a\">RedStone oracle</a>\n- PIVOT - <a href=\"https://bscscan.com/address/0x1B2103441A0A108daD8848D8F5d790e4D402921F\">Chainlink oracle</a>\n- FALLBACK - <a href=\"https://bscscan.com/address/0x594810b741d136f1960141C0d8Fb4a91bE78A820\">Binance oracle</a>\n\n<a href=\"https://community.venus.io/t/proposal-increase-robustness-of-feeds-configuration/4837/8\">Chaos Labs reviewed and accepted this change</a>. It should increase the robustness of the protocol, by relying on multiple providers acting in three different roles (main, pivot and fallback).\n\n#### Security and additional considerations\n\nWe applied the following security procedures for this upgrade:\n\n- <b>VIP execution simulation</b>: in a simulation environment, validating the BNB price returned by the Resilient Oracle is the same before and after the VIP execution, and the expected behavior if any of the three oracles fail or provide a significantly different price\n\n#### References\n\n- <a href=\"https://github.com/VenusProtocol/vips/pull/465\">VIP simulation</a>\n- <a href=\"https://oracle.binance.com/data-feeds/detail/bsc/BNB-USD\">BNB/USD price feed information on Binance Oracle</a>\n- <a href=\"https://docs-v4.venus.io/risk/resilient-price-oracle\">Documentation about Resilient Oracle</a>",
+    "endblock":49319182,
+    "eta":1746808265,
+    "actions":[
+      "0x594810b741d136f1960141c0d8fb4a91be78a820.setMaxStalePeriod(\"BNB\", 100)",
+      "0x6592b5de802159f3e74b2486b091d11a8256ab8a.setTokenConfig((0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb, [0x8455efa4d7ff63b8bfd96add889483ea7d39b70a, 0x1b2103441a0a108dad8848d8f5d790e4d402921f, 0x594810b741d136f1960141c0d8fb4a91be78a820], [True, True, True]))"
+    ]
   }
 ]
