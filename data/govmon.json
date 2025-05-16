@@ -9301,5 +9301,17 @@
       "0xa60deae5344f1152426ca440fb6552ea0e3005d6.giveCallPermission(0x0000000000000000000000000000000000000000, \"setGrowthRate(uint256,uint256)\", 0xedd04ecef0850e834833789576a1d435e7207c0d)",
       "0xa60deae5344f1152426ca440fb6552ea0e3005d6.giveCallPermission(0x0000000000000000000000000000000000000000, \"setSnapshotGap(uint256)\", 0xedd04ecef0850e834833789576a1d435e7207c0d)"
     ]
+  },
+  {
+    "id":"498",
+    "type":"Critical",
+    "title":"VIP-498 [BNB Chain] Risk Parameters Adjustments (BNB, SOL)",
+    "description":"If passed, this VIP will perform the changes recommended by Chaos Labs in the Venus community forum publications <a href=\"https://community.venus.io/t/chaos-labs-bnb-interest-rate-updates-05-16-25/5111\">Chaos Labs - BNB Interest Rate Updates 05/16/25</a> and <a href=\"https://community.venus.io/t/chaos-labs-risk-parameter-updates-05-16-25/5110\">Chaos Labs - Risk Parameter Updates - 05/16/25</a>:\n\n- <a href=\"https://bscscan.com/address/0xA07c5b74C9B40447a954e1466938b865b6BBea36\">BNB (Core pool)</a>: update the interest rate contract with another TwoKinksInterestRate contract, with the following attributes:\n    - First slope:\n        - Kink: 0.65 (from 0.8)\n        - Base rate: 0\n        - Multiplier: 0.045 (from 0.035)\n    - Second slope:\n        - Kink: 0.8 (from 0.9)\n        - Base: 0\n        - Multiplier: 1.4 (from 1.75)\n    - Jump multiplier: 3\n- <a href=\"https://bscscan.com/address/0xBf515bA4D1b52FFdCeaBF20d31D705Ce789F2cEC\">SOL (Core pool)</a>: increase the supply cap from 36,000 SOL to 72,000 SOL\n\nComplete analysis and details of these recommendations are available in the above publications.\n\n#### References\n\n- <a href=\"https://github.com/VenusProtocol/vips/pull/562\">VIP simulation</a>\n- <a href=\"https://github.com/VenusProtocol/venus-protocol/pull/592\">New Interest Rate contract for the vBNB market</a>\n- Source code of <a href=\"https://github.com/VenusProtocol/venus-protocol/blob/main/contracts/InterestRateModels/TwoKinksInterestRateModel.sol\">TwoKinksInterestRateModel smart contract</a>\n- <a href=\"https://docs-v4.venus.io/technical-reference/reference-technical-articles/two-kinks-interest-rate-curve\">Documentation about TwoKinksInterestRate</a>",
+    "endblock":49794580,
+    "eta":1747456836,
+    "actions":[
+      "0xfd36e2c2a6789db23113685031d7f16329158384._setMarketSupplyCaps([0xbf515ba4d1b52ffdceabf20d31d705ce789f2cec], [72000000000000000000000])",
+      "0x9a7890534d9d91d473f28cb97962d176e2b65f1d.setInterestRateModel(0x939c9458bee63bc21031be3d56ddd30af7f2230a)"
+    ]
   }
 ]
