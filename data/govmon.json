@@ -9472,5 +9472,31 @@
       "0xf522cd0360ef8c2ff48b648d53ea1717ec0f3ac3.setMarketSupplyCaps([0x76697f8eaea4be01c678376aab97498ee8f80d5c], [0])",
       "0xf522cd0360ef8c2ff48b648d53ea1717ec0f3ac3.unlistMarket(0x76697f8eaea4be01c678376aab97498ee8f80d5c)"
     ]
+  },
+  {
+    "id":"504",
+    "type":"Normal",
+    "title":"VIP-503 [BNB Chain] 0x48..9BEC Account remediation: Concluding steps",
+    "description":"If passed, following the community proposal \u201c<a href=\"https://community.venus.io/t/0x48-9bec-account-remediation-concluding-steps/5034\">0x48..9BEC Account remediation: Concluding steps</a>\u201d (<a href=\"https://snapshot.box/#/s:venus-xvs.eth/proposal/0xc8cc5b27f566f18e7030a26bfdc57cf27b326120b66c733ca91f369cb92aee70\">snapshot</a>), this VIP will:\n\n- Withdraw 100% of the BNB supplied by the account 0x48..9BEC (107,816 BNB, that is around $74M)\n- Burn 90% of the withdrawn BNB (around $63M)\n- Transfer 10% of the withdrawn BNB to the <a href=\"https://bscscan.com/address/0xdF31a28D68A2AB381D42b380649Ead7ae2A76E42\">RiskFund</a> contract, allocated to the <a href=\"https://bscscan.com/address/0xfD36E2c2a6789Db23113685031d7F16329158384\">Core pool</a> (10,775 BNB, that is around $7M)\n\nUSD values assume 1 BNB = $693.\n\n#### Security and additional considerations\n\nThe VIP commands have been simulated, validating different checks after the execution:\n\n- The vBNB balance of the account 0x48..9BEC will be zero\n- The WBNB balance of the RiskFunc contract will increase with the 10% of the withdrawn BNB\n- 90% of the withdrawn BNB are burned (transferred to the address 0x\u2026000)\n\nThis VIP uses the following auxiliary contracts to perform the required steps:\n\n- Temporary PolicyFacet. Deployed <a href=\"https://bscscan.com/address/0xeAeDCf8872AB651640f376e221289a583968e10F\">here</a>. Changes <a href=\"https://github.com/VenusProtocol/venus-protocol/pull/589\">here</a>. This temporary facet includes a custom implementation, allowing Governance to clawback the vBNB tokens of the account 0x48..9BEC, skipping the regular checks. This facet is replaced by the original one before the end of the VIP execution.\n- TransferAll contract. Deployed <a href=\"https://bscscan.com/address/0xCa111028493fda75ad8c627c70Fae008991C4772\">here</a>. It allows the VIP to transfer vBNB tokens without specifying the exact amount.\n- TokenRedeemer contract. Deployed <a href=\"https://bscscan.com/address/0xC53ffda840B51068C64b2E052a5715043f634bcd\">here</a>. Codebase <a href=\"https://github.com/VenusProtocol/venus-protocol/blob/develop/contracts/Governance/TokenRedeemer.sol\">here</a>. It allows the VIP to redeem 100% of vBNB tokens, transferring the withdrawn BNB to specific wallets.\n\n#### References\n\n- <a href=\"https://github.com/VenusProtocol/vips/pull/545\">VIP simulation</a>",
+    "endblock":50527022,
+    "eta":1748620634,
+    "actions":[
+      "0xfd36e2c2a6789db23113685031d7f16329158384.diamondCut([(0xeaedcf8872ab651640f376e221289a583968e10f, 1, [0xead1a8a0, 0xda3d454c, 0x5c778605, 0x5ec88c79, 0x4e79238f, 0x5fc7e71e, 0x47ef3b3b, 0x4ef4c3e1, 0x41c728b9, 0xeabe7d91, 0x51dff989, 0x24008a62, 0x1ededc91, 0xd02f7351, 0x6d35bf91, 0xbdcdc258, 0x6a56947e])])",
+      "0xa07c5b74c9b40447a954e1466938b865b6bbea36.seize(0x939bd8d64c0a9583a7dcea9933f7b21697ab6396, 0x489a8756c18c0b8b24ec2a2b9ff3d4d447f79bec, 434904265070245)",
+      "0xfd36e2c2a6789db23113685031d7f16329158384.diamondCut([(0x93e7ff7c87b496ae76ffb22d437c9d46461a9b51, 1, [0xead1a8a0, 0xda3d454c, 0x5c778605, 0x5ec88c79, 0x4e79238f, 0x5fc7e71e, 0x47ef3b3b, 0x4ef4c3e1, 0x41c728b9, 0xeabe7d91, 0x51dff989, 0x24008a62, 0x1ededc91, 0xd02f7351, 0x6d35bf91, 0xbdcdc258, 0x6a56947e])])",
+      "0xa07c5b74c9b40447a954e1466938b865b6bbea36.transfer(0xc53ffda840b51068c64b2e052a5715043f634bcd, 391413838563220)",
+      "0xc53ffda840b51068c64b2e052a5715043f634bcd.redeemAndTransfer(0xa07c5b74c9b40447a954e1466938b865b6bbea36, 0x0000000000000000000000000000000000000000)",
+      "0xa07c5b74c9b40447a954e1466938b865b6bbea36.transfer(0xc53ffda840b51068c64b2e052a5715043f634bcd, 43490426507025)",
+      "0xc53ffda840b51068c64b2e052a5715043f634bcd.redeemUnderlyingAndTransfer(0xa07c5b74c9b40447a954e1466938b865b6bbea36, 0x939bd8d64c0a9583a7dcea9933f7b21697ab6396, 10775889534505124802359, 0x939bd8d64c0a9583a7dcea9933f7b21697ab6396)",
+      "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.deposit{value: 10775889534505124802359}",
+      "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.transfer(0xa5622d276ccbb8d9bbe3d1ffd1bb11a0032e53f0, 10775889534505124802359)",
+      "0xa5622d276ccbb8d9bbe3d1ffd1bb11a0032e53f0.setPoolsAssetsDirectTransfer([0xfd36e2c2a6789db23113685031d7f16329158384], [[0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c]], [[True]])",
+      "0xa5622d276ccbb8d9bbe3d1ffd1bb11a0032e53f0.updateAssetsState(0xfd36e2c2a6789db23113685031d7f16329158384, 0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c)",
+      "0xa5622d276ccbb8d9bbe3d1ffd1bb11a0032e53f0.setPoolsAssetsDirectTransfer([0xfd36e2c2a6789db23113685031d7f16329158384], [[0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c]], [[False]])",
+      "0xa07c5b74c9b40447a954e1466938b865b6bbea36.approve(0xca111028493fda75ad8c627c70fae008991c4772, 434904265070245)",
+      "0xca111028493fda75ad8c627c70fae008991c4772.transferAll(0xa07c5b74c9b40447a954e1466938b865b6bbea36, 0xc53ffda840b51068c64b2e052a5715043f634bcd)",
+      "0xa07c5b74c9b40447a954e1466938b865b6bbea36.approve(0xca111028493fda75ad8c627c70fae008991c4772, 0)",
+      "0xc53ffda840b51068c64b2e052a5715043f634bcd.redeemAndTransfer(0xa07c5b74c9b40447a954e1466938b865b6bbea36, 0x939bd8d64c0a9583a7dcea9933f7b21697ab6396)"
+    ]
   }
 ]
