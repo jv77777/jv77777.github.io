@@ -10042,5 +10042,16 @@
       "0x2d56dc077072b53571b8252008c60e945108c75a.setValidationParams((14400, 1612800, 1, 806400))",
       "0x2d56dc077072b53571b8252008c60e945108c75a.setProposalConfigs([(1, 115200, 300000000000000000000000), (1, 115200, 300000000000000000000000), (1, 28800, 300000000000000000000000)])"
     ]
+  },
+  {
+    "id":"525",
+    "type":"Critical",
+    "title":"VIP-525 [BNB Chain] Risk Parameters Adjustments (asBNB, xSolvBTC)",
+    "description":"If passed, this VIP will perform the changes recommended by Chaos Labs in the Venus community forum publication <a href=\"https://community.venus.io/t/chaos-labs-risk-parameter-updates-06-27-25/5179\">Chaos Labs - Risk Parameter Updates - 06/27/25</a>:\n\n- <a href=\"https://app.venus.io/#/core-pool/market/0xCC1dB43a06d97f736C7B045AedD03C6707c09BDF?chainId=56\">asBNB (Core pool)</a>: increase the Supply Cap, from 6,000 asBNB to 24,000 asBNB\n- <a href=\"https://app.venus.io/#/core-pool/market/0xd804dE60aFD05EE6B89aab5D152258fD461B07D5?chainId=56\">xSolvBTC (Core pool)</a>: increase the Supply Cap, from 500 xSolvBTC to 750 xSolvBTC\n\nComplete analysis and details of these recommendations are available in the above publication.\n\n#### References\n\n- <a href=\"https://github.com/VenusProtocol/vips/pull/586\">VIP simulation</a>",
+    "endblock":52323348,
+    "eta":1751229613,
+    "actions":[
+      "0xfd36e2c2a6789db23113685031d7f16329158384._setMarketSupplyCaps([0xcc1db43a06d97f736c7b045aedd03c6707c09bdf, 0xd804de60afd05ee6b89aab5d152258fd461b07d5], [24000000000000000000000, 750000000000000000000])"
+    ]
   }
 ]
