@@ -1,5 +1,10 @@
 [
   {
+    "time":1751205600,
+    "total_supply_usd":2255154564,
+    "total_borrow_usd":647321974
+  },
+  {
     "time":1751202000,
     "total_supply_usd":2257562931,
     "total_borrow_usd":647973394
