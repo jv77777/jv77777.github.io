@@ -10053,5 +10053,24 @@
     "actions":[
       "0xfd36e2c2a6789db23113685031d7f16329158384._setMarketSupplyCaps([0xcc1db43a06d97f736c7b045aedd03c6707c09bdf, 0xd804de60afd05ee6b89aab5d152258fd461b07d5], [24000000000000000000000, 750000000000000000000])"
     ]
+  },
+  {
+    "id":"526",
+    "type":"Normal",
+    "title":"VIP-526 [BNB Chain][Ethereum] Deprecation of matured PT Pendle markets",
+    "description":"If passed, this VIP will perform the changes recommended by Chaos Labs in the Venus community forum publication <a href=\"https://community.venus.io/t/implement-generalized-risk-policy-for-matured-pt-markets/5050\">Implement Generalized Risk Policy for Matured PT Markets</a>, deprecating the following markets:\n\n- <a href=\"https://app.venus.io/#/core-pool/market/0x9e4E5fed5Ac5B9F732d0D850A615206330Bf1866?chainId=56\">PT-sUSDE-JUN2025 (Core pool) on BNB Chain</a>\n    - Pause supplying and entering the market (start using the market as collateral)\n- <a href=\"https://app.venus.io/#/isolated-pools/pool/0xF522cd0360EF8c2FF48B648d53EA1717Ec0F3Ac3/market/0x76697f8eaeA4bE01C678376aAb97498Ee8f80D5C?chainId=1\">PT-weETH-DEC24 (Liquid Staked ETH) on Ethereum</a>\n    - Pause every action\n    - Set Collateral Factor to zero\n    - Set supply and borrow cap to zero\n\nMoreover, the bootstrap liquidity provided by the <a href=\"https://etherscan.io/address/0xFD9B071168bC27DBE16406eC3Aba050Ce8Eb22FA\">Venus Treasury</a> in the <a href=\"https://app.venus.io/#/governance/proposal/305?chainId=56\">VIP-305</a> to the <a href=\"https://app.venus.io/#/isolated-pools/pool/0xF522cd0360EF8c2FF48B648d53EA1717Ec0F3Ac3/market/0x76697f8eaeA4bE01C678376aAb97498Ee8f80D5C?chainId=1\">PT-weETH-DEC24</a> market will be withdrawn in this VIP. That is 1.799618792534137830 PT-weETH-DEC24 tokens. Finally, this market will be removed from the pool (there are no more suppliers in that market).\n\n#### References\n\n- <a href=\"https://github.com/VenusProtocol/vips/pull/585\">VIP simulation</a>",
+    "endblock":52513209,
+    "eta":1751469091,
+    "actions":[
+      "0xfd36e2c2a6789db23113685031d7f16329158384._setActionsPaused([0x9e4e5fed5ac5b9f732d0d850a615206330bf1866], [0, 7], True)",
+      "0xfd9b071168bc27dbe16406ec3aba050ce8eb22fa.withdrawTreasuryToken(0x76697f8eaea4be01c678376aab97498ee8f80d5c, 179961879, 0xd969e79406c35e80750aaae061d402aab9325714)",
+      "0x76697f8eaea4be01c678376aab97498ee8f80d5c.redeem(179961879)",
+      "0x6ee2b5e19ecba773a352e5b21415dc419a700d1d.transfer(0xfd9b071168bc27dbe16406ec3aba050ce8eb22fa, 1799618792534137830)",
+      "0xf522cd0360ef8c2ff48b648d53ea1717ec0f3ac3.setActionsPaused([0x76697f8eaea4be01c678376aab97498ee8f80d5c], [0, 1, 3, 4, 6, 5, 7, 8], True)",
+      "0xf522cd0360ef8c2ff48b648d53ea1717ec0f3ac3.setCollateralFactor(0x76697f8eaea4be01c678376aab97498ee8f80d5c, 0, 0)",
+      "0xf522cd0360ef8c2ff48b648d53ea1717ec0f3ac3.setMarketBorrowCaps([0x76697f8eaea4be01c678376aab97498ee8f80d5c], [0])",
+      "0xf522cd0360ef8c2ff48b648d53ea1717ec0f3ac3.setMarketSupplyCaps([0x76697f8eaea4be01c678376aab97498ee8f80d5c], [0])",
+      "0xf522cd0360ef8c2ff48b648d53ea1717ec0f3ac3.unlistMarket(0x76697f8eaea4be01c678376aab97498ee8f80d5c)"
+    ]
   }
 ]
