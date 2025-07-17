@@ -10161,5 +10161,19 @@
       "0x652b90d1d45a7cd5be82c5fb61a4a00ba126dde5.setSnapshotGap(26066219693591668)",
       "0xd2ce3fb018805ef92b8c5976cb31f84b4e295f94.setTokenConfigs([(0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0, [0x6b51ee3af70b350aaadc05f418502b330c5aad7c, 0x0000000000000000000000000000000000000000, 0x0000000000000000000000000000000000000000], [True, False, False], False)])"
     ]
+  },
+  {
+    "id":"531",
+    "type":"Fasttrack",
+    "title":"VIP-531 [BNB Chain][ZKSync] Risk Parameters Adjustments (MATIC, wUSDM)",
+    "description":"If passed, this VIP will perform the changes recommended by Chaos Labs in the Venus community forum publication <a href=\"https://community.venus.io/t/chaos-labs-matic-and-wusdm-risk-update/5216\">Chaos Labs - MATIC and wUSDM Risk Update</a>:\n\n- <a href=\"https://app.venus.io/#/core-pool/market/0x5c9476FcD6a4F9a3654139721c949c2233bBbBc8?chainId=56\">MATIC (Core pool)</a> / BNB Chain:\n    - Update the price feed, switching to a POL/USD feed. The <a href=\"https://bscscan.com/address/0x081195B56674bb87b2B92F6D58F7c5f449aCE19d\">Chainlink feed for POL/USD</a> will be used\n    - Decrease the supply cap of MATIC, from 5,500,000 MATIC to 2,500,000 MATIC\n    - Decrease the borrow cap of MATIC, from 250,000 MATIC to 100,000 MATIC\n- <a href=\"https://app.venus.io/#/core-pool/market/0x183dE3C349fCf546aAe925E1c7F364EA6FB4033c?chainId=324\">wUSDM (Core pool)</a> / ZKSync:\n    - Fix the price of USDM to $1 in ZKSync Era. The price of the <a href=\"https://app.venus.io/#/core-pool/market/0x183dE3C349fCf546aAe925E1c7F364EA6FB4033c?chainId=324\">wUSDM</a> asset depends on the USDM/USD price\n\nComplete analysis and details of this recommendation are available in the above publication.\n\n#### References\n\n- <a href=\"https://github.com/VenusProtocol/vips/pull/592\">VIP simulation</a>",
+    "endblock":54427717,
+    "eta":1752905069,
+    "actions":[
+      "0x1b2103441a0a108dad8848d8f5d790e4d402921f.setTokenConfig((0xcc42724c6683b7e57334c4e856f4c9965ed682bd, 0x081195b56674bb87b2b92f6d58f7c5f449ace19d, 900))",
+      "0xfd36e2c2a6789db23113685031d7f16329158384._setMarketSupplyCaps([0x5c9476fcd6a4f9a3654139721c949c2233bbbbc8], [2500000000000000000000000])",
+      "0xfd36e2c2a6789db23113685031d7f16329158384._setMarketBorrowCaps([0x5c9476fcd6a4f9a3654139721c949c2233bbbbc8], [100000000000000000000000])",
+      "0x4fc29e1d3fffbdfbf822f09d20a5be97e59f66e5.setDirectPrice(0x7715c206a14ac93cb1a6c0316a6e5f8ad7c9dc31, 1000000000000000000)"
+    ]
   }
 ]
