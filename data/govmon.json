@@ -10175,5 +10175,22 @@
       "0xfd36e2c2a6789db23113685031d7f16329158384._setMarketBorrowCaps([0x5c9476fcd6a4f9a3654139721c949c2233bbbbc8], [100000000000000000000000])",
       "0x4fc29e1d3fffbdfbf822f09d20a5be97e59f66e5.setDirectPrice(0x7715c206a14ac93cb1a6c0316a6e5f8ad7c9dc31, 1000000000000000000)"
     ]
+  },
+  {
+    "id":"532",
+    "type":"Fasttrack",
+    "title":"VIP-532 [Ethereum] Risk Parameters Adjustments (LBTC, eBTC)",
+    "description":"If passed, this VIP will perform the changes recommended by Chaos Labs in the Venus community forum publication <a href=\"https://community.venus.io/t/chaos-labs-lbtc-and-ebtc-oracle-and-risk-parameter-update-07-17-25/5230\">Chaos Labs - LBTC and eBTC Oracle and Risk Parameter Update - 07/17/25</a>:\n\n- <a href=\"https://app.venus.io/#/pools/pool/0x687a01ecF6d3907658f7A7c714749fAC32336D1B/market/0x25C20e6e110A1cE3FEbaCC8b7E48368c7b2F0C91?chainId=1\">LBTC (Core pool)</a>:\n    - decrease borrow cap, from 45 LBTC to 0 LBTC\n    - update the risk parameters of the <a href=\"https://etherscan.io/address/0x54B033D102db7DD734E0Ad649463E90fFA78D853\">associated Capped Oracle</a>:\n        - Annual Growth Rate: 2%\n        - Snapshot Interval: 30 days\n        - Snapshot Gap: 0.17%\n- <a href=\"https://app.venus.io/#/pools/pool/0x687a01ecF6d3907658f7A7c714749fAC32336D1B/market/0x325cEB02fe1C2fF816A83a5770eA0E88e2faEcF2?chainId=1\">eBTC (Core pool)</a>:\n    - decrease borrow cap, from 12.6 eBTC to 0 eBTC\n    - update the risk parameters of the <a href=\"https://etherscan.io/address/0x04d6096A6F089047C7af6E4644D18fB766B8d4cE\">associated Capped Oracle</a>:\n        - Annual Growth Rate: 1.9%\n        - Snapshot Interval: 30 days\n        - Snapshot Gap: 0.16%\n\nComplete analysis and details of this recommendation are available in the above publication.\n\n#### References\n\n- <a href=\"https://github.com/VenusProtocol/vips/pull/594\">VIP simulation</a>\n- <a href=\"https://etherscan.io/address/0x54B033D102db7DD734E0Ad649463E90fFA78D853\">Oracle contract for LBTC</a>\n- <a href=\"https://etherscan.io/address/0x04d6096A6F089047C7af6E4644D18fB766B8d4cE\">Oracle contract for eBTC</a>",
+    "endblock":54880136,
+    "eta":1753244423,
+    "actions":[
+      "0x687a01ecf6d3907658f7a7c714749fac32336d1b.setMarketBorrowCaps([0x25c20e6e110a1ce3febacc8b7e48368c7b2f0c91], [0])",
+      "0x687a01ecf6d3907658f7a7c714749fac32336d1b.setMarketBorrowCaps([0x325ceb02fe1c2ff816a83a5770ea0e88e2faecf2], [0])",
+      "0x687a01ecf6d3907658f7a7c714749fac32336d1b.setActionsPaused([0x25c20e6e110a1ce3febacc8b7e48368c7b2f0c91, 0x325ceb02fe1c2ff816a83a5770ea0e88e2faecf2], [2], True)",
+      "0x54b033d102db7dd734e0ad649463e90ffa78d853.setGrowthRate(20000000000000000, 2592000)",
+      "0x54b033d102db7dd734e0ad649463e90ffa78d853.setSnapshotGap(170000)",
+      "0x04d6096a6f089047c7af6e4644d18fb766b8d4ce.setGrowthRate(19000000000000000, 2592000)",
+      "0x04d6096a6f089047c7af6e4644d18fb766b8d4ce.setSnapshotGap(160000)"
+    ]
   }
 ]
