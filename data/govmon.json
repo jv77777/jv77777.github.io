@@ -10220,5 +10220,19 @@
       "0x4630b71c1bd27c99dd86abb2a18c50c3f75c88fb.setRewardTokenSpeeds([0xb953f92b9f759d97d2f2dec10a8a3cf75fce3a95], [0], [0])",
       "0x4630b71c1bd27c99dd86abb2a18c50c3f75c88fb.setRewardTokenSpeeds([0xc219bc179c7cdb37eacb03f993f9fdc2495e3374], [0], [0])"
     ]
+  },
+  {
+    "id":"534",
+    "type":"Fasttrack",
+    "title":"VIP-534 [BNB Chain] Risk Parameters Adjustments (Liquid Staked ETH assets on BNB Chain)",
+    "description":"If passed, this VIP will perform the changes recommended by Chaos Labs in the Venus community forum publication <a href=\"https://community.venus.io/t/chaos-labs-isolated-instance-parameter-updates-07-17-25/5226\">Chaos Labs - Isolated Instance Parameter Updates - 07/17/25</a>:\n\n- <a href=\"https://app.venus.io/#/pools/pool/0xBE609449Eb4D76AD8545f957bBE04b596E8fC529/market/0xeCCACF760FEA7943C5b0285BD09F601505A29c05?chainId=56\">ETH (Liquid Staked ETH)</a>:\n    - reduce the supply cap, from 3,600 ETH to 18 ETH\n    - reduce the borrow cap, from 3,250 ETH to 10 ETH\n- <a href=\"https://app.venus.io/#/pools/pool/0xBE609449Eb4D76AD8545f957bBE04b596E8fC529/market/0x94180a3948296530024Ef7d60f60B85cfe0422c8?chainId=56\">wstETH (Liquid Staked ETH)</a>:\n    - reduce the supply cap, from 3,200 wstETH to 10.75 wstETH\n    - reduce the borrow cap, from 320 wstETH to 0 wstETH\n    - increase the Collateral Factor, from 0% to 5%\n- <a href=\"https://app.venus.io/#/pools/pool/0xBE609449Eb4D76AD8545f957bBE04b596E8fC529/market/0xc5b24f347254bD8cF8988913d1fd0F795274900F?chainId=56\">weETH (Liquid Staked ETH)</a>:\n    - reduce the supply cap, from 120 weETH to 4 weETH\n    - reduce the borrow cap, from 60 weETH to 0 weETH\n    - increase the Collateral Factor, from 0% to 5%\n\nComplete analysis and details of this recommendation are available in the above publication.\n\n#### References\n\n- <a href=\"https://github.com/VenusProtocol/vips/pull/595\">VIP simulation</a>",
+    "endblock":55396824,
+    "eta":1753631977,
+    "actions":[
+      "0xbe609449eb4d76ad8545f957bbe04b596e8fc529.setMarketSupplyCaps([0xeccacf760fea7943c5b0285bd09f601505a29c05, 0xc5b24f347254bd8cf8988913d1fd0f795274900f, 0x94180a3948296530024ef7d60f60b85cfe0422c8], [18000000000000000000, 4000000000000000000, 10750000000000000000])",
+      "0xbe609449eb4d76ad8545f957bbe04b596e8fc529.setMarketBorrowCaps([0xeccacf760fea7943c5b0285bd09f601505a29c05, 0xc5b24f347254bd8cf8988913d1fd0f795274900f, 0x94180a3948296530024ef7d60f60b85cfe0422c8], [10000000000000000000, 0, 0])",
+      "0xbe609449eb4d76ad8545f957bbe04b596e8fc529.setCollateralFactor(0xc5b24f347254bd8cf8988913d1fd0f795274900f, 50000000000000000, 930000000000000000)",
+      "0xbe609449eb4d76ad8545f957bbe04b596e8fc529.setCollateralFactor(0x94180a3948296530024ef7d60f60b85cfe0422c8, 50000000000000000, 930000000000000000)"
+    ]
   }
 ]
