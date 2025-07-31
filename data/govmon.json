@@ -10234,5 +10234,30 @@
       "0xbe609449eb4d76ad8545f957bbe04b596e8fc529.setCollateralFactor(0xc5b24f347254bd8cf8988913d1fd0f795274900f, 50000000000000000, 930000000000000000)",
       "0xbe609449eb4d76ad8545f957bbe04b596e8fc529.setCollateralFactor(0x94180a3948296530024ef7d60f60b85cfe0422c8, 50000000000000000, 930000000000000000)"
     ]
+  },
+  {
+    "id":"535",
+    "type":"Normal",
+    "title":"VIP-535 [BNB Chain][Ethereum] Remove Low-Activity Markets",
+    "description":"If this VIP passed, following the community post <a href=\"https://community.venus.io/t/remove-low-activity-markets/5240\">Remove Low-Activity Markets</a> (<a href=\"https://snapshot.box/#/s:venus-xvs.eth/proposal/0xb606db67b48f62c0795d1a269c66714cf4ba57bc03cbd4108a6fca7caa1948b4\">snapshot</a>), the following markets will be removed from the Venus Protocol:\n\nEthereum\n\n- Ethena pool:\n    - <a href=\"https://app.venus.io/#/pools/pool/0x562d2b6FF1dbf5f63E233662416782318cC081E4/market/0xa8e7f9473635a5CB79646f14356a9Fc394CA111A?chainId=1\">USDC</a>\n    - <a href=\"https://app.venus.io/#/pools/pool/0x562d2b6FF1dbf5f63E233662416782318cC081E4/market/0x0792b9c60C728C1D2Fd6665b3D7A08762a9b28e0?chainId=1\">sUSDe</a>\n    - <a href=\"https://app.venus.io/#/pools/pool/0x562d2b6FF1dbf5f63E233662416782318cC081E4/market/0x62D9E2010Cff87Bae05B91d5E04605ef864ABc3B?chainId=1\">PT-USDe-MAR25</a>\n    - <a href=\"https://app.venus.io/#/pools/pool/0x562d2b6FF1dbf5f63E233662416782318cC081E4/market/0xCca202a95E8096315E3F19E46e19E1b326634889?chainId=1\">PT-sUSDE-MAR25</a>\n- <a href=\"https://app.venus.io/#/pools/pool/0xF522cd0360EF8c2FF48B648d53EA1717Ec0F3Ac3/market/0xDB6C345f864883a8F4cae87852Ac342589E76D1B?chainId=1\">rsETH (Liquid Staked ETH pool)</a>\n\nBNB Chain\n\n- <a href=\"https://app.venus.io/#/pools/pool/0x9DF11376Cf28867E2B0741348044780FbB7cb1d6/market/0x02243F036897E3bE1cce1E540FA362fd58749149?chainId=56\">PT-SolvBTC.BBN-MAR25 (BTC)</a>\n\nIn <a href=\"https://app.venus.io/#/governance/proposal/510?chainId=56\">VIP-510: Deprecation of Low-Activity Markets on BNB Chain and Ethereum</a>, several markets were deprecated due to low user activity. This VIP aims to permanently remove some of these markets from the Venus Protocol based on the following criteria:\n\n- The markets have already been deprecated (supply and borrow functions are disabled, and the Max LTV is set to zero).\n- There are no outstanding borrowed assets, or the borrowed amounts are negligible.\n- The total USD value of supplied assets in the market is less than $20.\n\nBased on these conditions, the proposal seeks to remove the specified markets from the Venus Protocol. Once removed, these markets will no longer appear in the <a href=\"https://app.venus.io/\">official Venus app</a>, and users will be unable to interact with them in any way\u2014including supplying, borrowing, withdrawing, or repaying.",
+    "endblock":56027531,
+    "eta":1754105068,
+    "actions":[
+      "0x9df11376cf28867e2b0741348044780fbb7cb1d6.setActionsPaused([0x02243f036897e3be1cce1e540fa362fd58749149], [1, 3, 4, 6, 5, 8], True)",
+      "0x9df11376cf28867e2b0741348044780fbb7cb1d6.setMarketSupplyCaps([0x02243f036897e3be1cce1e540fa362fd58749149], [0])",
+      "0x9df11376cf28867e2b0741348044780fbb7cb1d6.unlistMarket(0x02243f036897e3be1cce1e540fa362fd58749149)",
+      "0x562d2b6ff1dbf5f63e233662416782318cc081e4.setActionsPaused([0x0792b9c60c728c1d2fd6665b3d7a08762a9b28e0, 0xcca202a95e8096315e3f19e46e19e1b326634889, 0x62d9e2010cff87bae05b91d5e04605ef864abc3b, 0xa8e7f9473635a5cb79646f14356a9fc394ca111a], [1, 3, 4, 6, 5, 8], True)",
+      "0x562d2b6ff1dbf5f63e233662416782318cc081e4.setMarketBorrowCaps([0xa8e7f9473635a5cb79646f14356a9fc394ca111a], [0])",
+      "0x562d2b6ff1dbf5f63e233662416782318cc081e4.setMarketSupplyCaps([0x0792b9c60c728c1d2fd6665b3d7a08762a9b28e0, 0xcca202a95e8096315e3f19e46e19e1b326634889, 0x62d9e2010cff87bae05b91d5e04605ef864abc3b, 0xa8e7f9473635a5cb79646f14356a9fc394ca111a], [0, 0, 0, 0])",
+      "0x562d2b6ff1dbf5f63e233662416782318cc081e4.unlistMarket(0x0792b9c60c728c1d2fd6665b3d7a08762a9b28e0)",
+      "0x562d2b6ff1dbf5f63e233662416782318cc081e4.unlistMarket(0xcca202a95e8096315e3f19e46e19e1b326634889)",
+      "0x562d2b6ff1dbf5f63e233662416782318cc081e4.unlistMarket(0x62d9e2010cff87bae05b91d5e04605ef864abc3b)",
+      "0x562d2b6ff1dbf5f63e233662416782318cc081e4.unlistMarket(0xa8e7f9473635a5cb79646f14356a9fc394ca111a)",
+      "0xf522cd0360ef8c2ff48b648d53ea1717ec0f3ac3.setActionsPaused([0xdb6c345f864883a8f4cae87852ac342589e76d1b], [0, 1, 3, 4, 6, 5, 7, 8], True)",
+      "0xf522cd0360ef8c2ff48b648d53ea1717ec0f3ac3.setMarketBorrowCaps([0xdb6c345f864883a8f4cae87852ac342589e76d1b], [0])",
+      "0xf522cd0360ef8c2ff48b648d53ea1717ec0f3ac3.setMarketSupplyCaps([0xdb6c345f864883a8f4cae87852ac342589e76d1b], [0])",
+      "0xf522cd0360ef8c2ff48b648d53ea1717ec0f3ac3.setCollateralFactor(0xdb6c345f864883a8f4cae87852ac342589e76d1b, 0, 0)",
+      "0xf522cd0360ef8c2ff48b648d53ea1717ec0f3ac3.unlistMarket(0xdb6c345f864883a8f4cae87852ac342589e76d1b)"
+    ]
   }
 ]
