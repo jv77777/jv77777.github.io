@@ -10273,5 +10273,17 @@
       "0xf322942f644a996a617bd29c16bd7d231d9f35e9.withdrawTreasuryBEP20(0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d, 66667000000000000000000, 0xb98d807cdd58a35d2fca300bebc06ac39a7ce038)",
       "0xf322942f644a996a617bd29c16bd7d231d9f35e9.withdrawTreasuryBEP20(0x55d398326f99059ff775485246999027b3197955, 4375000000000000000000, 0x1b3bce9bd90cf6598bcc0321cc10b48bfd6cf12f)"
     ]
+  },
+  {
+    "id":"537",
+    "type":"Critical",
+    "title":"VIP-537 [BNB Chain] Risk Parameters Adjustments (asBNB, SOL)",
+    "description":"If passed, this VIP will perform the changes recommended by Chaos Labs in the Venus community forum publication <a href=\"https://community.venus.io/t/chaos-labs-risk-parameter-updates-08-04-25/5263\">Chaos Labs - Risk Parameter Updates - 08/04/25</a>:\n\n- <a href=\"https://app.venus.io/#/pools/pool/0xfD36E2c2a6789Db23113685031d7F16329158384/market/0xCC1dB43a06d97f736C7B045AedD03C6707c09BDF?chainId=56\">asBNB (Core pool)</a>: increase the Supply Cap, from 48,000 asBNB to 72,000 asBNB\n- <a href=\"https://app.venus.io/#/pools/pool/0xfD36E2c2a6789Db23113685031d7F16329158384/market/0xBf515bA4D1b52FFdCeaBF20d31D705Ce789F2cEC?chainId=56\">SOL (Core pool)</a>: increase the Borrow Cap, from 9,000 SOL to 18,000 SOL\n\nComplete analysis and details of this recommendation are available in the above publication.\n\n#### References\n\n- <a href=\"https://github.com/VenusProtocol/vips/pull/598\">VIP simulation</a>",
+    "endblock":56647498,
+    "eta":1754505277,
+    "actions":[
+      "0xfd36e2c2a6789db23113685031d7f16329158384._setMarketSupplyCaps([0xcc1db43a06d97f736c7b045aedd03c6707c09bdf], [72000000000000000000000])",
+      "0xfd36e2c2a6789db23113685031d7f16329158384._setMarketBorrowCaps([0xbf515ba4d1b52ffdceabf20d31d705ce789f2cec], [18000000000000000000000])"
+    ]
   }
 ]
