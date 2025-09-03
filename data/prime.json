@@ -52,12 +52,12 @@
   {
     "addr":"0x923F2EeDfdC7Ba8F60083DFf1A9413cbD032841d",
     "eligible_time":1759647106,
-    "staked":1005
+    "staked":1013
   },
   {
     "addr":"0xB5CB0558276575346B59e2E153925CC5f0152045",
     "eligible_time":1759685103,
-    "staked":1394
+    "staked":1408
   },
   {
     "addr":"0xe101C2Dbd54d5a466fe7aE3608b40F3aeC768407",
@@ -107,7 +107,7 @@
   {
     "addr":"0x5a9DaD5116a4c9267983Bd57424a4862ee94fc1d",
     "eligible_time":1761002927,
-    "staked":1319
+    "staked":1320
   },
   {
     "addr":"0xEed889E0670314E2Ed906e97601A371983718112",
@@ -157,7 +157,7 @@
   {
     "addr":"0xC390eeC58076Ef4AcE71EAE9C155a7ebf71464b9",
     "eligible_time":1762148299,
-    "staked":19995
+    "staked":20007
   },
   {
     "addr":"0x36Bdb35E1A8Bf2E3523E233F3BA7FB28E368E924",
@@ -202,7 +202,7 @@
   {
     "addr":"0x3F486cD27f1ee19137d39255A364A44879a6Fbdc",
     "eligible_time":1763184809,
-    "staked":1698
+    "staked":1702
   },
   {
     "addr":"0x4B55047036aFFd3AA9b1068dfC4a5F40022Dd5d7",
@@ -253,5 +253,45 @@
     "addr":"0x3dd01E2Cc6f2b9E30581cbEE2b134701934ef050",
     "eligible_time":1764542128,
     "staked":1006
+  },
+  {
+    "addr":"0x18c14A4F2C4b1433Bc20078e86f935a988eCa86C",
+    "eligible_time":1764622583,
+    "staked":1427
+  },
+  {
+    "addr":"0x461Db62A9F6e2fd38421f70BCAB178B7FA521191",
+    "eligible_time":1764624783,
+    "staked":1926
+  },
+  {
+    "addr":"0xF755B39D0D32F77eC71C131Bb26BfdDCE08c20C9",
+    "eligible_time":1764634456,
+    "staked":16491
+  },
+  {
+    "addr":"0x391485F064F5A3C4636a2E39719A90483e1A3394",
+    "eligible_time":1764637858,
+    "staked":1001
+  },
+  {
+    "addr":"0x5eD38F81Ae8D89963927a1903a9Ad3B048E7202F",
+    "eligible_time":1764642438,
+    "staked":3000
+  },
+  {
+    "addr":"0x78E28176a53B5f2238ddb8BdCabaC5FdEcC5BCc9",
+    "eligible_time":1764644073,
+    "staked":1015
+  },
+  {
+    "addr":"0xcc438517bdd382FB699945e4e4A2c8731c5Ab6AF",
+    "eligible_time":1764652419,
+    "staked":1006
+  },
+  {
+    "addr":"0x448aE6E35A3165F106736f14A986b3cD7f5177Ab",
+    "eligible_time":1764686682,
+    "staked":3433
   }
 ]
