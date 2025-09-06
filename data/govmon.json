@@ -10296,5 +10296,18 @@
     "actions":[
       "0xfd36e2c2a6789db23113685031d7f16329158384._setMarketSupplyCaps([0xf841cb62c19fcd4ff5cd0aab5939f3140baac3ea, 0xd804de60afd05ee6b89aab5d152258fd461b07d5], [2000000000000000000000, 1250000000000000000000])"
     ]
+  },
+  {
+    "id":"539",
+    "type":"Critical",
+    "title":"VIP-539 [BNB Chain] Risk Parameters Adjustments (BTCB, xSolvBTC)",
+    "description":"If passed, this VIP will perform the changes recommended by Chaos Labs in the Venus community forum publications <a href=\"https://community.venus.io/t/proposal-adjustment-of-btcb-interest-rate-model-irm-on-venus/5268/7\">Proposal: Adjustment of BTCB Interest Rate Model (IRM) on Venus</a> and <a href=\"https://community.venus.io/t/chaos-labs-risk-parameter-updates-8-25-25/5281\">Chaos Labs - Risk Parameter Updates - 8/25/25</a>:\n\n- <a href=\"https://app.venus.io/#/pool/0xfD36E2c2a6789Db23113685031d7F16329158384/market/0x882C173bC7Ff3b7786CA16dfeD3DFFfb9Ee7847B?chainId=56\">BTCB (Core pool)</a>:\n    - update the following parameters of the Interest Rate Model:\n        - Annual Base Rate: from 0% to 0.25%\n        - Multiplier (annualized): from 9% to 3.67%\n    - Reserve Factor: from 20% to 30%\n- <a href=\"https://app.venus.io/#/pool/0xfD36E2c2a6789Db23113685031d7F16329158384/market/0xd804dE60aFD05EE6B89aab5D152258fD461B07D5?chainId=56\">xSolvBTC (Core pool)</a>:\n    - increase supply cap, from 1,250 xSolvBTC to 1,375 xSolvBTC\n\nComplete analysis and details of this recommendation are available in the above publications.\n\n#### References\n\n- <a href=\"https://github.com/VenusProtocol/vips/pull/602\">VIP simulation</a>",
+    "endblock":60202011,
+    "eta":1757171618,
+    "actions":[
+      "0x882c173bc7ff3b7786ca16dfed3dfffb9ee7847b._setInterestRateModel(0xe74fe49e07c8f0cc4398a481206e2d835b88b8f4)",
+      "0x882c173bc7ff3b7786ca16dfed3dfffb9ee7847b._setReserveFactor(300000000000000000)",
+      "0xfd36e2c2a6789db23113685031d7f16329158384._setMarketSupplyCaps([0xd804de60afd05ee6b89aab5d152258fd461b07d5], [1375000000000000000000])"
+    ]
   }
 ]
