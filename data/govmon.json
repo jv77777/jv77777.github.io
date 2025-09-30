@@ -11277,5 +11277,17 @@
       "0xfd36e2c2a6789db23113685031d7f16329158384.setIsBorrowAllowed(1, 0xeca88125a5adbe82614ffc12d0db554e2e2867c8, True)",
       "0x4788629abc6cfca10f9f969efdeaa1cf70c23555.giveCallPermission(0xfd36e2c2a6789db23113685031d7f16329158384, \"_supportMarket(address)\", 0x555ba73db1b006f3f2c7db7126d6e4343adbce02)"
     ]
+  },
+  {
+    "id":"549",
+    "type":"Critical",
+    "title":"VIP-549 [BNB Chain] Risk Parameters Adjustments (USDT, USDC)",
+    "description":"If passed, this VIP will perform the changes recommended by Chaos Labs in the Venus community forum publication <a href=\"https://community.venus.io/t/proposal-irm-adjustments-for-usdc-and-usdt-on-bnb-chain-core-pool/5367/7\">Proposal: IRM Adjustments for USDC and USDT on BNB Chain Core Pool</a>:\n\n- <a href=\"https://app.venus.io/#/pool/0xfD36E2c2a6789Db23113685031d7F16329158384/market/0xfD5840Cd36d94D7229439859C0112a4185BC0255?chainId=56&amp;tab=supply\">USDT (Core pool)</a>:\n    - decrease the borrow rate (APR) at Kink 1, from 8% to 7%\n    - decrease the borrow rate (APR) at Kink 2, from 15% to 9%\n    - decrease the borrow rate (APR) at 100% utilization rate, from 45% to 40%\n- <a href=\"https://app.venus.io/#/pool/0xfD36E2c2a6789Db23113685031d7F16329158384/market/0xecA88125a5ADbe82614ffC12D0DB554E2e2867C8?chainId=56&amp;tab=supply\">USDC (Core pool)</a>:\n    - decrease the borrow rate (APR) at Kink 1, from 8% to 6.5%\n    - decrease the borrow rate (APR) at Kink 2, from 15% to 8.5%\n    - decrease the borrow rate (APR) at 100% utilization rate, from 45% to 40%\n\nComplete analysis and details of these recommendations are available in the above publication.\n\n### References\n\n- <a href=\"https://github.com/VenusProtocol/vips/pull/616\">VIP simulation</a>",
+    "endblock":63017758,
+    "eta":1759262377,
+    "actions":[
+      "0xfd5840cd36d94d7229439859c0112a4185bc0255._setInterestRateModel(0x1a7c9091973cabc491e361a9eaefd047b48a3647)",
+      "0xeca88125a5adbe82614ffc12d0db554e2e2867c8._setInterestRateModel(0xf48508a44da9c7d210a668ece4d31bc98702602b)"
+    ]
   }
 ]
