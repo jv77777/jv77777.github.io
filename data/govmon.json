@@ -11349,5 +11349,16 @@
       "0xb076d4f15c08d7a7b89466327ba71bc7e1311b58.fundXVSVault(385000000000000000000)",
       "0x8b79692aab2822be30a6382eb04763a74752d5b4.setRewardAmountPerBlockOrSecond(0xc1eb7689147c81ac840d4ff0d298489fc7986d52, 25930000000000)"
     ]
+  },
+  {
+    "id":"553",
+    "type":"Critical",
+    "title":"VIP-553 [BNB Chain] Risk Parameters Adjustments (TWT, asBNB)",
+    "description":"If passed, this VIP will perform the changes recommended by Chaos Labs in the Venus community forum publication <a href=\"https://community.venus.io/t/chaos-labs-risk-parameter-updates-10-07-25/5423/1\">Chaos Labs - Risk Parameter Updates - 10/07/25</a>:\n\n- <a href=\"https://app.venus.io/#/pool/0xfD36E2c2a6789Db23113685031d7F16329158384/market/0x4d41a36D04D97785bcEA57b057C412b278e6Edcc?chainId=56&amp;tab=supply\">TWT (Core pool)</a>:\n    - increase supply cap, from 4M TWT to 8M TWT\n- <a href=\"https://app.venus.io/#/pool/0xfD36E2c2a6789Db23113685031d7F16329158384/market/0xCC1dB43a06d97f736C7B045AedD03C6707c09BDF?chainId=56&amp;tab=supply\">asBNB (Core pool)</a>:\n    - increase supply cap, from 72,000 asBNB to 108,000 asBNB\n\nComplete analysis and details of these recommendations are available in the above publication.\n\n#### References\n\n- <a href=\"https://github.com/VenusProtocol/vips/pull/620\">VIP simulation</a>",
+    "endblock":63942012,
+    "eta":1759955930,
+    "actions":[
+      "0xfd36e2c2a6789db23113685031d7f16329158384._setMarketSupplyCaps([0x4d41a36d04d97785bcea57b057c412b278e6edcc, 0xcc1db43a06d97f736c7b045aedd03c6707c09bdf], [8000000000000000000000000, 108000000000000000000000])"
+    ]
   }
 ]
