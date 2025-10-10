@@ -11360,5 +11360,40 @@
     "actions":[
       "0xfd36e2c2a6789db23113685031d7f16329158384._setMarketSupplyCaps([0x4d41a36d04d97785bcea57b057c412b278e6edcc, 0xcc1db43a06d97f736c7b045aedd03c6707c09bdf], [8000000000000000000000000, 108000000000000000000000])"
     ]
+  },
+  {
+    "id":"554",
+    "type":"Normal",
+    "title":"VIP-554 [BNB Chain] Enable BNB E-Mode group",
+    "description":"#### Summary\n\nIf passed, following the <a href=\"https://community.venus.io/t/e-mode-and-liquidation-threshold-in-the-bnb-chain-core-pool/5339/26\">Chaos Labs recommendations</a>, this VIP will add a new market to the BNB Chain Core pool for the underlying asset <a href=\"https://bscscan.com/address/0xB0b84D294e0C75A6abe60171b70edEb2EFd14A1B\">slisBNB</a>. Additionally, this VIP will add the following markets to the new \"BNB\" E-Mode group on the BNB Chain Core pool, following <a href=\"https://community.venus.io/t/e-mode-and-liquidation-threshold-in-the-bnb-chain-core-pool/5339/7\">this community proposal</a> (<a href=\"https://snapshot.box/#/s:venus-xvs.eth/proposal/0x0fe626f2a7979d6ff63333523e77c12187ad987485b1bd609c45fb0a1fc090b6\">snapshot</a>), and the associated <a href=\"https://community.venus.io/t/e-mode-and-liquidation-threshold-in-the-bnb-chain-core-pool/5339/26\">Chaos Labs recommendations</a>:\n\n- <a href=\"https://app.venus.io/#/pool/0xfD36E2c2a6789Db23113685031d7F16329158384/market/0x6bCa74586218dB34cdB402295796b79663d816e9?chainId=56&amp;tab=supply\">WBNB</a>\n- <a href=\"https://app.venus.io/#/pool/0xfD36E2c2a6789Db23113685031d7F16329158384/market/0xCC1dB43a06d97f736C7B045AedD03C6707c09BDF?chainId=56&amp;tab=supply\">asBNB</a>\n- slisBNB\n\n#### Description\n\nRisk parameters of the new market in the Core pool\n\nUnderlying token: <a href=\"https://bscscan.com/address/0xB0b84D294e0C75A6abe60171b70edEb2EFd14A1B\">slisBNB</a>\n\n- Borrow cap: 0\n- Supply cap: 20,000\n- Collateral factor: 0\n- Liquidation threshold: 0\n- Reserve factor: 0\n- Bootstrap liquidity: 0.1 slisBNB (the minted VTokens will be burned)\n- Interest rates (not relevant, because the asset is not borrowable, but configured anyway):\n    - kink: 0.5\n    - base (yearly): 0\n    - multiplier (yearly): 0.09\n    - jump multiplier (yearly): 2\n- Liquidation incentive: 0%\n\nThe risk parameters of the markets added to the \u201cBNB\u201d E-Mode group, in that group, are:\n\n- <a href=\"https://app.venus.io/#/pool/0xfD36E2c2a6789Db23113685031d7F16329158384/market/0x6bCa74586218dB34cdB402295796b79663d816e9?chainId=56&amp;tab=supply\">WBNB</a>\n    - Collateral Factor: 0%\n    - Liquidation Threshold: 0%\n    - Liquidation Incentive: 0%\n    - It can be borrowed but it cannot be used as collateral\n- <a href=\"https://app.venus.io/#/pool/0xfD36E2c2a6789Db23113685031d7F16329158384/market/0xCC1dB43a06d97f736C7B045AedD03C6707c09BDF?chainId=56&amp;tab=supply\">asBNB</a>\n    - Collateral Factor: 89%\n    - Liquidation Threshold: 92%\n    - Liquidation Incentive: 4%\n    - It cannot be borrowed but it can be used as collateral\n- slisBNB\n    - Collateral Factor: 90%\n    - Liquidation Threshold: 93%\n    - Liquidation Incentive: 4%\n    - It cannot be borrowed but it can be used as collateral\n\n#### Security and additional considerations\n\nWe applied the following security procedures for this upgrade:\n\n- No changes in the deployed codebase.\n- <b>VIP execution simulation</b>: in a simulation environment, validating that the new market is added, and the expected markets are added to the BNB E-Mode pool\n- <b>Deployment on testnet</b>: the same changes have been performed on BNB Chain testnet, and used in the Venus Protocol testnet deployment\n\n#### Deployed contracts\n\nBNB Chain\n\n- <a href=\"https://bscscan.com/address/0x89c910Eb8c90df818b4649b508Ba22130Dc73Adc\">vslisBNB</a>\n\nBNB Chain testnet\n\n- <a href=\"https://testnet.bscscan.com/address/0xaB5504A3cde0d8253E8F981D663c7Ff7128B3e56\">vslisBNB</a>\n\n#### References\n\n- <a href=\"https://github.com/VenusProtocol/venus-protocol/pull/614\">E-Mode feature</a>\n- <a href=\"https://github.com/VenusProtocol/vips/pull/621\">VIP simulation</a>\n- <a href=\"https://testnet.bscscan.com/tx/0xc110f6e20e62246c0b2979af7858fabe61d99f8134143409852d50da39ba99bf\">Upgrade on BNB Chain testnet</a>\n- <a href=\"https://docs-v4.venus.io/technical-reference/reference-technical-articles/emode\">Technical article about E-Mode</a>",
+    "endblock":64258511,
+    "eta":1760193332,
+    "actions":[
+      "0xfd36e2c2a6789db23113685031d7f16329158384._supportMarket(0x89c910eb8c90df818b4649b508ba22130dc73adc)",
+      "0xfd36e2c2a6789db23113685031d7f16329158384._setMarketSupplyCaps([0x89c910eb8c90df818b4649b508ba22130dc73adc], [20000000000000000000000])",
+      "0xfd36e2c2a6789db23113685031d7f16329158384._setMarketBorrowCaps([0x89c910eb8c90df818b4649b508ba22130dc73adc], [0])",
+      "0x89c910eb8c90df818b4649b508ba22130dc73adc.setAccessControlManager(0x4788629abc6cfca10f9f969efdeaa1cf70c23555)",
+      "0x89c910eb8c90df818b4649b508ba22130dc73adc.setProtocolShareReserve(0xca01d5a9a248a830e9d93231e791b1affed7c446)",
+      "0x89c910eb8c90df818b4649b508ba22130dc73adc.setReduceReservesBlockDelta(28800)",
+      "0x89c910eb8c90df818b4649b508ba22130dc73adc._setReserveFactor(0)",
+      "0xfd36e2c2a6789db23113685031d7f16329158384.setCollateralFactor(0x89c910eb8c90df818b4649b508ba22130dc73adc, 0, 0)",
+      "0xfd36e2c2a6789db23113685031d7f16329158384.setLiquidationIncentive(0x89c910eb8c90df818b4649b508ba22130dc73adc, 1000000000000000000)",
+      "0xf322942f644a996a617bd29c16bd7d231d9f35e9.withdrawTreasuryBEP20(0xb0b84d294e0c75a6abe60171b70edeb2efd14a1b, 100000000000000000, 0x939bd8d64c0a9583a7dcea9933f7b21697ab6396)",
+      "0xb0b84d294e0c75a6abe60171b70edeb2efd14a1b.approve(0x89c910eb8c90df818b4649b508ba22130dc73adc, 100000000000000000)",
+      "0x89c910eb8c90df818b4649b508ba22130dc73adc.mint(100000000000000000)",
+      "0xb0b84d294e0c75a6abe60171b70edeb2efd14a1b.approve(0x89c910eb8c90df818b4649b508ba22130dc73adc, 0)",
+      "0x89c910eb8c90df818b4649b508ba22130dc73adc.transfer(0x0000000000000000000000000000000000000000, 10000000)",
+      "0x89c910eb8c90df818b4649b508ba22130dc73adc.transfer(0xf322942f644a996a617bd29c16bd7d231d9f35e9, 0)",
+      "0xfd36e2c2a6789db23113685031d7f16329158384._setActionsPaused([0x89c910eb8c90df818b4649b508ba22130dc73adc], [2], True)",
+      "0xfd36e2c2a6789db23113685031d7f16329158384.createPool(\"BNB\")",
+      "0xfd36e2c2a6789db23113685031d7f16329158384.addPoolMarkets([3, 3, 3], [0x6bca74586218db34cdb402295796b79663d816e9, 0xcc1db43a06d97f736c7b045aedd03c6707c09bdf, 0x89c910eb8c90df818b4649b508ba22130dc73adc])",
+      "0xfd36e2c2a6789db23113685031d7f16329158384.setCollateralFactor(3, 0xcc1db43a06d97f736c7b045aedd03c6707c09bdf, 890000000000000000, 920000000000000000)",
+      "0xfd36e2c2a6789db23113685031d7f16329158384.setCollateralFactor(3, 0x89c910eb8c90df818b4649b508ba22130dc73adc, 900000000000000000, 930000000000000000)",
+      "0xfd36e2c2a6789db23113685031d7f16329158384.setLiquidationIncentive(3, 0x6bca74586218db34cdb402295796b79663d816e9, 1000000000000000000)",
+      "0xfd36e2c2a6789db23113685031d7f16329158384.setLiquidationIncentive(3, 0xcc1db43a06d97f736c7b045aedd03c6707c09bdf, 1040000000000000000)",
+      "0xfd36e2c2a6789db23113685031d7f16329158384.setLiquidationIncentive(3, 0x89c910eb8c90df818b4649b508ba22130dc73adc, 1040000000000000000)",
+      "0xfd36e2c2a6789db23113685031d7f16329158384.setIsBorrowAllowed(3, 0x6bca74586218db34cdb402295796b79663d816e9, True)",
+      "0xfd36e2c2a6789db23113685031d7f16329158384.setAllowCorePoolFallback(3, True)"
+    ]
   }
 ]
