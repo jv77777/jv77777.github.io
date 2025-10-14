@@ -11395,5 +11395,16 @@
       "0xfd36e2c2a6789db23113685031d7f16329158384.setIsBorrowAllowed(3, 0x6bca74586218db34cdb402295796b79663d816e9, True)",
       "0xfd36e2c2a6789db23113685031d7f16329158384.setAllowCorePoolFallback(3, True)"
     ]
+  },
+  {
+    "id":"555",
+    "type":"Critical",
+    "title":"VIP-555 [BNB Chain] Risk Parameters Adjustments (asBNB)",
+    "description":"If passed, this VIP will perform the changes recommended by Chaos Labs in the Venus community forum publication <a href=\"https://community.venus.io/t/chaos-labs-risk-parameter-updates-10-13-25/5441\">Chaos Labs - Risk Parameter Updates - 10/13/25</a>:\n\n- <a href=\"https://app.venus.io/#/pool/0xfD36E2c2a6789Db23113685031d7F16329158384/market/0xCC1dB43a06d97f736C7B045AedD03C6707c09BDF?chainId=56&amp;tab=supply\">asBNB (Core pool)</a>:\n    - increase supply cap, from 108,000 asBNB to 216,000 asBNB\n\nComplete analysis and details of these recommendations are available in the above publication.\n\n### References\n\n- <a href=\"https://github.com/VenusProtocol/vips/pull/626\">VIP simulation</a>",
+    "endblock":64618213,
+    "eta":1760463160,
+    "actions":[
+      "0xfd36e2c2a6789db23113685031d7f16329158384._setMarketSupplyCaps([0xcc1db43a06d97f736c7b045aedd03c6707c09bdf], [216000000000000000000000])"
+    ]
   }
 ]
