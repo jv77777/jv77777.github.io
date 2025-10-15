@@ -52,7 +52,7 @@
   {
     "addr":"0xC390eeC58076Ef4AcE71EAE9C155a7ebf71464b9",
     "eligible_time":1762148299,
-    "staked":20271
+    "staked":20300
   },
   {
     "addr":"0xdB1ECb702FC145FfA3b429DC86A08289F781eAa9",
@@ -82,7 +82,7 @@
   {
     "addr":"0x3F486cD27f1ee19137d39255A364A44879a6Fbdc",
     "eligible_time":1763184809,
-    "staked":1724
+    "staked":1811
   },
   {
     "addr":"0x4B55047036aFFd3AA9b1068dfC4a5F40022Dd5d7",
@@ -267,7 +267,7 @@
   {
     "addr":"0x298953FB089E9B5Cd5E92f8c4FEdA94E3BF4c5f7",
     "eligible_time":1766641296,
-    "staked":3379
+    "staked":4526
   },
   {
     "addr":"0xC7aDC31d7B180B0Ee4Ac3737Aab8114021ab8Fd9",
