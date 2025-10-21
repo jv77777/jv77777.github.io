@@ -11406,5 +11406,32 @@
     "actions":[
       "0xfd36e2c2a6789db23113685031d7f16329158384._setMarketSupplyCaps([0xcc1db43a06d97f736c7b045aedd03c6707c09bdf], [216000000000000000000000])"
     ]
+  },
+  {
+    "id":"556",
+    "type":"Normal",
+    "title":"VIP-556 [BNB Chain] USDe oracle configuration and Stablecoins E-Mode parameters",
+    "description":"If passed, this VIP will perform the changes recommended by Chaos Labs in <a href=\"https://community.venus.io/t/e-mode-and-liquidation-threshold-in-the-bnb-chain-core-pool/5339/10\">this Venus community forum publication</a>:\n\n- Resilient Oracle configuration for <a href=\"https://bscscan.com/address/0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34\">USDe</a>\n    - MAIN oracle: use the <a href=\"https://bscscan.com/address/0xB97Ad0E74fa7d920791E90258A6E2085088b4320#code\">USDT/USD Chainlink price feed</a>\n    - PIVOT and FALLBACK: use the <a href=\"https://bscscan.com/address/0x10402B01cD2E6A9ed6DBe683CbC68f78Ff02f8FC\">USDe/USD Chainlink price feed</a>\n    - Set the validation bounds between the main and pivot/fallback oracles at 0.94\u20131.06\n- Risk parameters on the Stablecoins E-Mode group:\n    - <a href=\"https://app.venus.io/#/pool/0xfD36E2c2a6789Db23113685031d7F16329158384/market/0x74ca6930108F775CC667894EEa33843e691680d7?chainId=56&amp;tab=supply\">USDe</a>: increase the Liquidation Threshold, from 92% to 92.5%\n    - <a href=\"https://app.venus.io/#/pool/0xfD36E2c2a6789Db23113685031d7F16329158384/market/0x699658323d58eE25c69F1a29d476946ab011bD18?chainId=56&amp;tab=supply\">sUSDe</a>:\n        - increase the Collateral Factor, from 89% to 89.5%\n        - increase the Liquidation Threshold, from 91% to 91.5%\n    - <a href=\"https://app.venus.io/#/pool/0xfD36E2c2a6789Db23113685031d7F16329158384/market/0x6D0cDb3355c93A0cD20071aBbb3622731a95c73E?chainId=56&amp;tab=supply\">PT-sUSDe-30OCT2025</a>:\n        - increase the Collateral Factor, from 90% to 90.5%\n        - increase the Liquidation Threshold, from 92% to 92.5%\n\nComplete analysis and details of these recommendations are available in the above publication.",
+    "endblock":65515498,
+    "eta":1761137405,
+    "actions":[
+      "0x4788629abc6cfca10f9f969efdeaa1cf70c23555.giveCallPermission(0x22dc2baea32e95ab07c2f5b8f63336cbf61ab6b8, \"setDirectPrice(address,uint256)\", 0x939bd8d64c0a9583a7dcea9933f7b21697ab6396)",
+      "0x4788629abc6cfca10f9f969efdeaa1cf70c23555.giveCallPermission(0x22dc2baea32e95ab07c2f5b8f63336cbf61ab6b8, \"setDirectPrice(address,uint256)\", 0x555ba73db1b006f3f2c7db7126d6e4343adbce02)",
+      "0x4788629abc6cfca10f9f969efdeaa1cf70c23555.giveCallPermission(0x22dc2baea32e95ab07c2f5b8f63336cbf61ab6b8, \"setDirectPrice(address,uint256)\", 0x213c446ec11e45b15a6e29c1c1b402b8897f606d)",
+      "0x4788629abc6cfca10f9f969efdeaa1cf70c23555.giveCallPermission(0x22dc2baea32e95ab07c2f5b8f63336cbf61ab6b8, \"setDirectPrice(address,uint256)\", 0x3a3284dc0faffb0b5f0d074c4c704d14326c98cf)",
+      "0x4788629abc6cfca10f9f969efdeaa1cf70c23555.giveCallPermission(0x22dc2baea32e95ab07c2f5b8f63336cbf61ab6b8, \"setTokenConfig(TokenConfig)\", 0x939bd8d64c0a9583a7dcea9933f7b21697ab6396)",
+      "0x4788629abc6cfca10f9f969efdeaa1cf70c23555.giveCallPermission(0x22dc2baea32e95ab07c2f5b8f63336cbf61ab6b8, \"setTokenConfig(TokenConfig)\", 0x555ba73db1b006f3f2c7db7126d6e4343adbce02)",
+      "0x4788629abc6cfca10f9f969efdeaa1cf70c23555.giveCallPermission(0x22dc2baea32e95ab07c2f5b8f63336cbf61ab6b8, \"setTokenConfig(TokenConfig)\", 0x213c446ec11e45b15a6e29c1c1b402b8897f606d)",
+      "0x4788629abc6cfca10f9f969efdeaa1cf70c23555.giveCallPermission(0x22dc2baea32e95ab07c2f5b8f63336cbf61ab6b8, \"setTokenConfig(TokenConfig)\", 0x3a3284dc0faffb0b5f0d074c4c704d14326c98cf)",
+      "0x22dc2baea32e95ab07c2f5b8f63336cbf61ab6b8.acceptOwnership()",
+      "0x22dc2baea32e95ab07c2f5b8f63336cbf61ab6b8.setTokenConfig((0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34, 0xb97ad0e74fa7d920791e90258a6e2085088b4320, 86400))",
+      "0x6e332ff0bb52475304494e4ae5063c1051c7d735.setValidateConfig((0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34, 1060000000000000000, 940000000000000000))",
+      "0x6592b5de802159f3e74b2486b091d11a8256ab8a.setOracle(0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34, 0x22dc2baea32e95ab07c2f5b8f63336cbf61ab6b8, 0)",
+      "0x6592b5de802159f3e74b2486b091d11a8256ab8a.setOracle(0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34, 0x1b2103441a0a108dad8848d8f5d790e4d402921f, 1)",
+      "0x6592b5de802159f3e74b2486b091d11a8256ab8a.setOracle(0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34, 0x1b2103441a0a108dad8848d8f5d790e4d402921f, 2)",
+      "0xfd36e2c2a6789db23113685031d7f16329158384.setCollateralFactor(1, 0x699658323d58ee25c69f1a29d476946ab011bd18, 895000000000000000, 915000000000000000)",
+      "0xfd36e2c2a6789db23113685031d7f16329158384.setCollateralFactor(1, 0x74ca6930108f775cc667894eea33843e691680d7, 900000000000000000, 925000000000000000)",
+      "0xfd36e2c2a6789db23113685031d7f16329158384.setCollateralFactor(1, 0x6d0cdb3355c93a0cd20071abbb3622731a95c73e, 905000000000000000, 925000000000000000)"
+    ]
   }
 ]
