@@ -11433,5 +11433,19 @@
       "0xfd36e2c2a6789db23113685031d7f16329158384.setCollateralFactor(1, 0x74ca6930108f775cc667894eea33843e691680d7, 900000000000000000, 925000000000000000)",
       "0xfd36e2c2a6789db23113685031d7f16329158384.setCollateralFactor(1, 0x6d0cdb3355c93a0cd20071abbb3622731a95c73e, 905000000000000000, 925000000000000000)"
     ]
+  },
+  {
+    "id":"557",
+    "type":"Critical",
+    "title":"VIP-557 [BNB Chain] Enable the WBETHOracle for WBETH on BNB Chain ",
+    "description":"If passed, this VIP will perform the changes recommended by <a href=\"https://community.venus.io/t/chaos-labs-wbeth-oracle-update/5463\">Chaos Labs</a> to update the WBETH oracle configuration and introduce a capped pricing mechanism.\n\n<b>Oracle configuration for WBETH</b>\n\n- Replace the current <a href=\"https://bscscan.com/address/0x594810b741d136f1960141C0d8Fb4a91bE78A820#readProxyContract\">Binance oracle</a>.\n- Use the <a href=\"https://bscscan.com/token/0xa2e3356610840701bdf5611a53974510ae27e2e1#readProxyContract\">exchangeRate()</a> function from the <a href=\"https://bscscan.com/token/0xa2e3356610840701bdf5611a53974510ae27e2e1\">WBETH contract</a> to calculate the WBETH/ETH conversion rate.\n- Apply Venus\u2019 <a href=\"https://docs-v4.venus.io/risk/resilient-price-oracle\">Resilient Price Oracle</a> to determine the ETH/USD price.\n- Combine both to produce the WBETH/USD price feed.\n\n<b>Capped Price Oracle (CAPO) configuration</b>\n\n- Introduce a CAPO layer to limit WBETH price growth and reduce overpricing risk.\n- Parameters:\n    - Annual Growth Rate: <b>4.64%</b>\n    - Snapshot Interval: <b>30 days</b>\n    - Snapshot Gap: <b>0.39%</b>\n\nComplete analysis and details of these recommendations are available in <a href=\"https://community.venus.io/t/chaos-labs-wbeth-oracle-update/5463\">Chaos\u2019 Labs post</a>.",
+    "endblock":65634661,
+    "eta":1761226799,
+    "actions":[
+      "0x49938fc72262c126eb5d4bdf6430c55189aeb2ba.setSnapshot(1085017335673557400, 1760151751)",
+      "0x49938fc72262c126eb5d4bdf6430c55189aeb2ba.setGrowthRate(46400000000000000, 2592000)",
+      "0x49938fc72262c126eb5d4bdf6430c55189aeb2ba.setSnapshotGap(4215128607557400)",
+      "0x6592b5de802159f3e74b2486b091d11a8256ab8a.setTokenConfigs([(0xa2e3356610840701bdf5611a53974510ae27e2e1, [0x49938fc72262c126eb5d4bdf6430c55189aeb2ba, 0x0000000000000000000000000000000000000000, 0x0000000000000000000000000000000000000000], [True, False, False], False)])"
+    ]
   }
 ]
