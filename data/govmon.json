@@ -11493,5 +11493,22 @@
       "0xdf31a28d68a2ab381d42b380649ead7ae2a76e42.sweepTokenFromPool(0x55d398326f99059ff775485246999027b3197955, 0xfd36e2c2a6789db23113685031d7f16329158384, 0x57e47016497576383fc6e3d6f4deb4db9f98a6f9, 156277260000000000000000)",
       "0xdf31a28d68a2ab381d42b380649ead7ae2a76e42.sweepTokenFromPool(0x55d398326f99059ff775485246999027b3197955, 0xfd36e2c2a6789db23113685031d7f16329158384, 0xc6396e4dd7642208f83b4bf955bbd2a602432c1d, 72488600000000000000000)"
     ]
+  },
+  {
+    "id":"560",
+    "type":"Normal",
+    "title":"VIP-560 Payments issuance to Providers",
+    "description":"#### Summary\n\nIf passed, this VIP will perform the following actions:\n\n- Transfer 23,750 USDC from the <a href=\"https://etherscan.io/address/0xFD9B071168bC27DBE16406eC3Aba050Ce8Eb22FA\">Venus Treasury on Ethereum</a> to Messari for Commissioned Research reports\n- Transfer 100,000 USDC from the <a href=\"https://bscscan.com/address/0xf322942f644a996a617bd29c16bd7d231d9f35e9\">Venus Treasury on BNB Chain</a> to Chaos Labs for risk management services\n\n<b>Details</b>\n\n<b>Messari Protocol Services</b>\n\n- Service provider: Messari (<a href=\"https://messari.io/\">https://messari.io</a>)\n- Concept: Venus Commissioned Research reports for Q3 2025.\n- Cost: 23,750 USDC, to be sent to the Ethereum address 0x8f0f345c908c176fc829f69858c3ad6fdd3bee9a\n- Last VIP with a payment to Messari: <a href=\"https://app.venus.io/#/governance/proposal/474?chainId=56\">VIP-474</a>\n\n<b>Chaos Labs</b>\n\n- Risk Manager: Chaos Labs (<a href=\"https://chaoslabs.xyz/\">https://chaoslabs.xyz</a>)\n- Risk Management services from October 1st, 2025 to December 31st, 2025\n- References:\n    - <a href=\"https://community.venus.io/t/chaos-labs-venus-renewal/5160/3\">Proposal in the community forum</a>\n    - <a href=\"https://snapshot.box/#/s:venus-xvs.eth/proposal/0xa8ea32ac0a6d36d037c31bfafc658c5e8e0fb4b93ec76aa5d574ef6489b83eac\">Snapshot vote</a>\n- Cost: 100,000 USDC, to be sent to the BNB Chain address 0xb98D807cDD58a35d2Fca300bEBC06ac39A7CE038\n\n#### References\n\n- <a href=\"https://github.com/VenusProtocol/vips/pull/630\">VIP simulation</a>",
+    "endblock":66672195,
+    "eta":1762005053,
+    "actions":[
+      "0xf322942f644a996a617bd29c16bd7d231d9f35e9.withdrawTreasuryBEP20(0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d, 100000000000000000000000, 0xb98d807cdd58a35d2fca300bebc06ac39a7ce038)",
+      "0xfd9b071168bc27dbe16406ec3aba050ce8eb22fa.withdrawTreasuryToken(0xdac17f958d2ee523a2206206994597c13d831ec7, 2916000000, 0xd969e79406c35e80750aaae061d402aab9325714)",
+      "0xdac17f958d2ee523a2206206994597c13d831ec7.approve(0xe592427a0aece92de3edee1f18e0157c05861564, 2916000000)",
+      "0xe592427a0aece92de3edee1f18e0157c05861564.exactInputSingle((0xdac17f958d2ee523a2206206994597c13d831ec7, 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48, 100, 0xd969e79406c35e80750aaae061d402aab9325714, 1762512162, 2916000000, 2914000000, 0))",
+      "0xfd9b071168bc27dbe16406ec3aba050ce8eb22fa.withdrawTreasuryToken(0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48, 20836000000, 0x8f0f345c908c176fc829f69858c3ad6fdd3bee9a)",
+      "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.transfer(0x8f0f345c908c176fc829f69858c3ad6fdd3bee9a, 2914000000)",
+      "0xdac17f958d2ee523a2206206994597c13d831ec7.approve(0xe592427a0aece92de3edee1f18e0157c05861564, 0)"
+    ]
   }
 ]
