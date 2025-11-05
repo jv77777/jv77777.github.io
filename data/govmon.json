@@ -11540,5 +11540,16 @@
       "0x6bca74586218db34cdb402295796b79663d816e9._setInterestRateModel(0xb1c97b14de87928845fcf0016b48b3a61aa3e1ad)",
       "0x6bca74586218db34cdb402295796b79663d816e9._setReserveFactor(150000000000000000)"
     ]
+  },
+  {
+    "id":"563",
+    "type":"Normal",
+    "title":"VIP-563 [BNB Chain] Fund transfer for Binance marketing campaign",
+    "description":"If passed, this VIP will transfer 400,000 USDT from the Venus Treasury on BNB chain to the Binance team for a marketing campaign. The funds will be paid out entirely to users in rewards and incentives over the duration of the campaign.\n\nThe campaign will run for a period of 45 days and be part of a broader marketing campaign.",
+    "endblock":67220072,
+    "eta":1762416007,
+    "actions":[
+      "0xf322942f644a996a617bd29c16bd7d231d9f35e9.withdrawTreasuryBEP20(0x55d398326f99059ff775485246999027b3197955, 400000000000000000000000, 0x3c274b82b20a84a02d816fd37ee096f7ac2cd396)"
+    ]
   }
 ]
