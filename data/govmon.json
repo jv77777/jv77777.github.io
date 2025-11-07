@@ -11551,5 +11551,16 @@
     "actions":[
       "0xf322942f644a996a617bd29c16bd7d231d9f35e9.withdrawTreasuryBEP20(0x55d398326f99059ff775485246999027b3197955, 400000000000000000000000, 0x3c274b82b20a84a02d816fd37ee096f7ac2cd396)"
     ]
+  },
+  {
+    "id":"564",
+    "type":"Critical",
+    "title":"VIP-564 Repayment of Bad Debt Using the Risk Fund",
+    "description":"If passed, this VIP will withdraw 1,200,000 USDT from the\u00a0<a href=\"https://bscscan.com/address/0xdF31a28D68A2AB381D42b380649Ead7ae2A76E42\">Risk Fund</a>\u00a0contract on BNB Chain to the\u00a0<a href=\"https://bscscan.com/address/0x5e7bb1f600e42bc227755527895a282f782555ec\">Development Team wallet</a>, which will convert them to\u00a0$CAKE, $FIL and $EIGEN and transfer them to finish the subsequent steps to clear the bad debt.\n\nThis is the prerequisite exposed in the community post \"<a href=\"https://community.venus.io/t/proposal-to-repay-10-oct-2025-bad-debt-with-the-venus-risk-fund/5525\">Proposal to Repay 10 Oct 2025 Bad Debt with the Venus Risk Fund</a>\". In the follow up steps, these funds will be used to repay the bad debt generated during the 10 Oct 2025 Market Crash.\n\n### <b>References</b>\n\n- <a href=\"https://github.com/VenusProtocol/vips/pull/634/files\">VIP simulation</a>\n- Community post \"<a href=\"https://community.venus.io/t/proposal-to-repay-10-oct-2025-bad-debt-with-the-venus-risk-fund/5525\">Proposal to Repay 10 Oct 2025 Bad Debt with the Venus Risk Fund</a>\"",
+    "endblock":67369943,
+    "eta":1762528432,
+    "actions":[
+      "0xdf31a28d68a2ab381d42b380649ead7ae2a76e42.sweepTokenFromPool(0x55d398326f99059ff775485246999027b3197955, 0xfd36e2c2a6789db23113685031d7f16329158384, 0x5e7bb1f600e42bc227755527895a282f782555ec, 1200000000000000000000000)"
+    ]
   }
 ]
