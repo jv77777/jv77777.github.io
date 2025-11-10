@@ -11562,5 +11562,17 @@
     "actions":[
       "0xdf31a28d68a2ab381d42b380649ead7ae2a76e42.sweepTokenFromPool(0x55d398326f99059ff775485246999027b3197955, 0xfd36e2c2a6789db23113685031d7f16329158384, 0x5e7bb1f600e42bc227755527895a282f782555ec, 1200000000000000000000000)"
     ]
+  },
+  {
+    "id":"565",
+    "type":"Normal",
+    "title":"VIP-565 [BNB Chain] Adjust Prime Rewards Allocation for November 2025",
+    "description":"## <b>Description</b>\n\nFollowing the community proposal <a href=\"https://community.venus.io/t/adjust-prime-rewards-allocation-for-nov-25/5519\">\u201cProposal: Adjust Prime Rewards Allocation for November 2025\u201d</a>, if passed, this VIP will implement the following changes on BNB Chain:\n\n- <b>Adjust Prime income distribution</b>\n    - 25% to <a href=\"https://bscscan.com/address/0xa758c9C215B6c4198F0a0e3FA46395Fa15Db691b\">USDCPrimeConverter</a> (-25pp)\n    - 75% to <a href=\"https://bscscan.com/address/0xD9f101AA67F3D72662609a2703387242452078C3\">USDTPrimeConverter</a> (+25pp)\n- <b>Update distribution speeds in the Prime markets</b>\n    - USDT: 55,000 USDT/month (+30,000)\n    - USDC: 55,000 USDC/month (+30,000)\n\n### <b>References</b>\n\n- Community post: <a href=\"https://community.venus.io/t/adjust-prime-rewards-allocation-for-nov-25/5519\">Proposal: Adjust Prime Rewards Allocation for November 2025</a>\n- Previous Prime adjustments on BNB Chain: <a href=\"https://community.venus.io/t/proposal-adjust-prime-rewards-allocation-for-october-2025/5368/1\">Proposal: Adjust Prime Rewards Allocation for October 2025</a> (<a href=\"https://app.venus.io/#/governance/proposal/550?chainId=56\">VIP-550</a>)\n- <a href=\"https://docs-v4.venus.io/whats-new/prime-yield\">Venus Prime documentation</a>\n- <a href=\"https://github.com/VenusProtocol/vips/pull/635/files\">VIP simulation</a>",
+    "endblock":67801619,
+    "eta":1762852213,
+    "actions":[
+      "0xca01d5a9a248a830e9d93231e791b1affed7c446.addOrUpdateDistributionConfigs([(0, 1500, 0xd9f101aa67f3d72662609a2703387242452078c3), (0, 500, 0xa758c9c215b6c4198f0a0e3fa46395fa15db691b)])",
+      "0x23c4f844ffddc6161174eb32c770d4d8c07833f2.setTokensDistributionSpeed([0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d, 0x55d398326f99059ff775485246999027b3197955], [15400990000000000, 15400990000000000])"
+    ]
   }
 ]
