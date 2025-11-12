@@ -11574,5 +11574,21 @@
       "0xca01d5a9a248a830e9d93231e791b1affed7c446.addOrUpdateDistributionConfigs([(0, 1500, 0xd9f101aa67f3d72662609a2703387242452078c3), (0, 500, 0xa758c9c215b6c4198f0a0e3fa46395fa15db691b)])",
       "0x23c4f844ffddc6161174eb32c770d4d8c07833f2.setTokensDistributionSpeed([0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d, 0x55d398326f99059ff775485246999027b3197955], [15400990000000000, 15400990000000000])"
     ]
+  },
+  {
+    "id":"566",
+    "type":"Normal",
+    "title":"VIP-566 Oct-25 Payments issuance to providers (2)",
+    "description":"If passed, this VIP will perform the following actions:\n\n- Transfer 23,750 USDC from the <a href=\"https://etherscan.io/address/0xFD9B071168bC27DBE16406eC3Aba050Ce8Eb22FA\">Venus Treasury on Ethereum</a> to Messari for commissioned research reports.\n\n<b>Details</b>\n\nThe initial proposal, <a href=\"https://app.venus.io/#/governance/proposal/561?chainId=56\">VIP-561</a>, failed to execute on Ethereum because the USDT\u2013USDC swap used to obtain the required 23,750 USDC in the Treasury expired before completion. This updated VIP corrects the expiry date, ensuring that the transaction can be successfully executed this time.\n\n<b>Messari Protocol Services</b>\n\n- Service provider: Messari (<a href=\"https://messari.io/\">https://messari.io</a>)\n- Concept: Venus Commissioned Research reports for Q3 2025.\n- Cost: 23,750 USDC, to be sent to the Ethereum address 0x8f0f345c908c176fc829f69858c3ad6fdd3bee9a\n- Last VIP with a payment to Messari: <a href=\"https://app.venus.io/#/governance/proposal/474?chainId=56\">VIP-474</a>",
+    "endblock":67999444,
+    "eta":1763000596,
+    "actions":[
+      "0xfd9b071168bc27dbe16406ec3aba050ce8eb22fa.withdrawTreasuryToken(0xdac17f958d2ee523a2206206994597c13d831ec7, 2916000000, 0xd969e79406c35e80750aaae061d402aab9325714)",
+      "0xdac17f958d2ee523a2206206994597c13d831ec7.approve(0xe592427a0aece92de3edee1f18e0157c05861564, 2916000000)",
+      "0xe592427a0aece92de3edee1f18e0157c05861564.exactInputSingle((0xdac17f958d2ee523a2206206994597c13d831ec7, 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48, 100, 0xd969e79406c35e80750aaae061d402aab9325714, 1763985299, 2916000000, 2914000000, 0))",
+      "0xfd9b071168bc27dbe16406ec3aba050ce8eb22fa.withdrawTreasuryToken(0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48, 20836000000, 0x8f0f345c908c176fc829f69858c3ad6fdd3bee9a)",
+      "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.transfer(0x8f0f345c908c176fc829f69858c3ad6fdd3bee9a, 2914000000)",
+      "0xdac17f958d2ee523a2206206994597c13d831ec7.approve(0xe592427a0aece92de3edee1f18e0157c05861564, 0)"
+    ]
   }
 ]
