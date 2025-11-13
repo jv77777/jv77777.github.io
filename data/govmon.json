@@ -11661,5 +11661,19 @@
       "0x4788629abc6cfca10f9f969efdeaa1cf70c23555.giveCallPermission(0x0000000000000000000000000000000000000000, \"setFlashLoanFeeMantissa(uint256,uint256)\", 0x1c2cac6ec528c20800b2fe734820d87b581eaa6b)",
       "0xfd36e2c2a6789db23113685031d7f16329158384._setComptrollerLens(0x732138e18fa6f8f8e456ad829db429a450a79758)"
     ]
+  },
+  {
+    "id":"568",
+    "type":"Normal",
+    "title":"VIP-568 [BNB Chain] Delist PT-USDe-30OCT2025 Market",
+    "description":"If passed, this VIP proposal will remove the PT-USDe-30OCT2025 market from the \u201cStablecoins\u201d E-Mode group within the BNB Chain Core Pool, as the market has already expired on 30 OCT 2025.",
+    "endblock":68164905,
+    "eta":1763124721,
+    "actions":[
+      "0xfd36e2c2a6789db23113685031d7f16329158384.setActionsPaused([0x6d0cdb3355c93a0cd20071abbb3622731a95c73e], [0, 1, 3, 4, 5, 6, 7, 8], True)",
+      "0xfd36e2c2a6789db23113685031d7f16329158384.setMarketSupplyCaps([0x6d0cdb3355c93a0cd20071abbb3622731a95c73e], [0])",
+      "0xfd36e2c2a6789db23113685031d7f16329158384.removePoolMarket(1, 0x6d0cdb3355c93a0cd20071abbb3622731a95c73e)",
+      "0xfd36e2c2a6789db23113685031d7f16329158384.unlistMarket(0x6d0cdb3355c93a0cd20071abbb3622731a95c73e)"
+    ]
   }
 ]
