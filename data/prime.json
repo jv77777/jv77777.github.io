@@ -1,15 +1,5 @@
 [
   {
-    "addr":"0xD70D617f35143AbAdF6A6286c836F7e44dE909f8",
-    "eligible_time":1766280879,
-    "staked":1041
-  },
-  {
-    "addr":"0xbC1AA36a6485ab7C081dF50F29d6dab9D1C81b10",
-    "eligible_time":1766319683,
-    "staked":1001
-  },
-  {
     "addr":"0xF755B39D0D32F77eC71C131Bb26BfdDCE08c20C9",
     "eligible_time":1766397742,
     "staked":17051
@@ -187,7 +177,7 @@
   {
     "addr":"0xFB1603c23eA39c57B5E8ea9BD8cCd3802CbA93FC",
     "eligible_time":1771047778,
-    "staked":1006
+    "staked":1007
   },
   {
     "addr":"0xf1784D5afD9F8E1040Ff577B41123Ceee9f2E2A4",
